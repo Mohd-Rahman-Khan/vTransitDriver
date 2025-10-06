@@ -1,0 +1,255 @@
+import { StyleSheet } from "react-native";
+import colors from "../../../styles/colors";
+import {
+  moderateScale,
+  moderateScaleVertical,
+  height,
+  width,
+  textScale,
+} from "../../../styles/responsiveSize";
+import fontFamily from "../../../styles/fontFamily";
+export const styles = StyleSheet.create({
+  topContainer: { height: 150 },
+  backIcon: {
+    width: moderateScale(width / 16),
+    height: moderateScale(width / 16),
+  },
+  backButtonContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10,
+    //paddingHorizontal: 20,
+  },
+  headerTitleText: {
+    color: colors.white,
+    marginLeft: 10,
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  bottomContainer: {
+    flex: 1,
+    width: "100%",
+    backgroundColor: colors.lightGary,
+    //justifyContent: "center",
+    alignItems: "center",
+  },
+  contentSectionContainer: {
+    flex: 1,
+    width: width - 15,
+    backgroundColor: colors.white,
+    marginTop: -100,
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+    paddingBottom: 20,
+  },
+  tabContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  activeButtonStyle: {
+    borderBottomWidth: 2,
+    borderColor: colors.darkBlueColor,
+    width: "50%",
+    paddingVertical: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+  },
+  deactiveButtonStyle: {
+    borderBottomWidth: 2,
+    borderColor: colors.lightGary,
+    width: "50%",
+    paddingVertical: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+  },
+  activeTextStyle: {
+    color: colors.darkBlueColor,
+    fontSize: 16,
+  },
+  deactiveTextStyle: {
+    color: colors.darkGray,
+    fontSize: 16,
+  },
+  driverDetailContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    //alignItems: 'center',
+    paddingHorizontal: 10,
+    marginTop: 20,
+  },
+  nameAndIconContainer: {
+    width: "40%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  ratingContainer: {
+    width: "58%",
+  },
+  thumbnailIcon: {
+    height: 70,
+    width: 70,
+    resizeMode: "contain",
+    borderRadius: 50,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    // elevation: 5,
+  },
+  overallRatingText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: colors.darkBlueColor,
+  },
+  ratingDetailContainer: {
+    flexDirection: "row",
+    //justifyContent: 'space-between',
+    alignItems: "center",
+    marginTop: 10,
+  },
+  ratingTextContainer: {
+    width: "30%",
+  },
+  ratingStarContainer: {
+    width: "68%",
+    alignItems: "flex-start",
+  },
+  ratingTextStyle: {
+    fontSize: 35,
+    fontWeight: "bold",
+    color: colors.black,
+  },
+  driverNameStyle: {
+    color: colors.black,
+    marginTop: 10,
+    fontSize: 18,
+    textAlign: "center",
+  },
+  totalReviewText: {
+    fontSize: 12,
+    marginTop: 5,
+    color: colors.darkGray,
+  },
+  ratingListContainer: {
+    flex: 1,
+    paddingHorizontal: 10,
+  },
+  reviewText: {
+    fontSize: 16,
+    color: colors.darkBlueColor,
+    fontWeight: "700",
+  },
+  listItemContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    borderBottomWidth: 0.3,
+    borderBottomColor: colors.lightGray,
+    paddingVertical: 10,
+  },
+  listItemThumbnailIconContainer: {
+    width: "22%",
+  },
+  listItemDetailContainer: {
+    width: "81%",
+    alignItems: "flex-start",
+  },
+  listItemThumbnail: { height: 60, width: 60, borderRadius: 30 },
+  listItemName: {
+    color: colors.darkBlueColor,
+    fontSize: 16,
+    fontWeight: "500",
+  },
+  listItemDetail: { color: colors.greyTextColor, fontSize: 14 },
+  listItemDateText: {
+    color: colors.greyTextColor,
+    fontSize: 15,
+    fontWeight: "500",
+    //marginTop: 5,
+  },
+  overviewContainer: {
+    flex: 1,
+  },
+  overviewAverageRatingContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 20,
+  },
+  overallRatingTextContainer: {
+    marginTop: 10,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  overviewTotalReviewText: {
+    fontSize: 16,
+    marginTop: 10,
+    color: colors.darkGray,
+  },
+  feedbackSummaryContainer: {
+    paddingHorizontal: 10,
+    flex: 1,
+  },
+  feedbackText: {
+    color: colors.darkBlueColor,
+    fontSize: 18,
+    fontWeight: "700",
+  },
+  skillAndCompetenceText: {
+    fontSize: 14,
+    marginTop: 10,
+  },
+  progressBarRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  progressBarTitleContainer: { width: "30%" },
+  progressBarIconContainer: { width: "55%" },
+  progressBarNumberContainer: { width: "10%" },
+  progressBarTitleStyle: { color: colors.darkGray },
+  progressBarNumberTextStyle: { color: colors.black, fontWeight: "500" },
+  starContainerStyle: {
+    flexDirection: "row",
+  },
+  ratingContainerStyle: {
+    flexDirection: "row-reverse",
+    alignItems: "center",
+    marginTop: -6,
+    marginBottom: -6,
+  },
+  categoryContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 15,
+  },
+  categoryLeftBox: { width: "50%" },
+  categoryRightBox: { width: "50%", alignItems: "flex-end" },
+  categoryName: { color: colors.gray, fontSize: 12 },
+  rightBoxRow: { flexDirection: "row", alignItems: "center" },
+  numberOfTimesRated: {
+    marginRight: 10,
+    color: colors.black,
+    fontSize: 12,
+  },
+  headerBackgroundImage: { height: 150, width: "100%" },
+  titleAndIconContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 20,
+  },
+  devider: {
+    height: 0.3,
+    width: "100%",
+    backgroundColor: colors.lightGray,
+    marginVertical: 15,
+  },
+  progressRatingContainer: { paddingHorizontal: 10, marginTop: 20 },
+});

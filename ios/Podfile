@@ -1,0 +1,75 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '13.2'
+
+permissions_path = '../node_modules/react-native-permissions/ios'
+install! 'cocoapods', :deterministic_uuids => false
+
+rn_maps_path = '../node_modules/react-native-maps'
+pod 'react-native-google-maps', :path => rn_maps_path
+pod 'GoogleMaps'
+pod 'Google-Maps-iOS-Utils'
+
+pod 'react-native-in-app-review', :path => '../node_modules/react-native-in-app-review'
+
+permissions_path = '../node_modules/react-native-permissions/ios'
+pod 'Permission-LocationAlways', :path => "#{permissions_path}/LocationAlways/Permission-LocationAlways.podspec"
+pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse/Permission-LocationWhenInUse.podspec"
+
+target 'ETravelMateDriver' do
+  config = use_native_modules!
+  pod 'TrustKit'
+
+  # Flags change depending on the env values.
+  flags = get_default_flags()
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # to enable hermes on iOS, change `false` to `true` and then install pods
+    :hermes_enabled => flags[:hermes_enabled],
+    :fabric_enabled => flags[:fabric_enabled],
+    # An absolute path to your application root.
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+
+  pod 'react-native-document-picker', :path => '../node_modules/react-native-document-picker'
+
+  pod 'rn-fetch-blob', :path => '../node_modules/rn-fetch-blob'
+
+  pod 'GoogleUtilities', :modular_headers => true
+  pod 'FirebaseCore', :modular_headers => true
+
+  
+# pod 'react-native-mapmyindia-intouch', :path => '../node_modules/mapmyindia-intouch-react-native-sdk'
+  pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
+
+  pod 'react-native-keep-awake', :path => '../node_modules/react-native-keep-awake'
+
+  target 'ETravelMateDriverTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable the next line.
+  use_flipper!()
+
+  
+
+  post_install do |installer|
+    react_native_post_install(installer)
+    __apply_Xcode_12_5_M1_post_install_workaround(installer)
+    # error resolved start
+    installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = "arm64"
+      # Force iOS deployment target
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.2'
+    end
+  end
+  # error resolved end
+  end
+end

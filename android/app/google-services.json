@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "679597783952",
+    "project_id": "vtransitdriver",
+    "storage_bucket": "vtransitdriver.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679597783952:android:e2424bc5a1135624399115",
+        "android_client_info": {
+          "package_name": "com.vtransitdriver"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfsqiXLurQNug9ZWIHelzZ8GMPQ2qz3HY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

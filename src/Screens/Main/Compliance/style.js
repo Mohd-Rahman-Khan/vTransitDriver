@@ -1,0 +1,230 @@
+import { StyleSheet } from "react-native";
+import colors from "../../../styles/colors";
+import {
+  moderateScale,
+  moderateScaleVertical,
+  height,
+  width,
+  textScale,
+} from "../../../styles/responsiveSize";
+import fontFamily from "../../../styles/fontFamily";
+
+export const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    backgroundColor: colors.white,
+  },
+  topContainer: { height: 150 },
+  contentSectionContainer: {
+    flex: 1,
+    width: width - 15,
+    backgroundColor: colors.white,
+    marginTop: -90,
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+    paddingBottom: 20,
+  },
+  bottomContainer: {
+    flex: 1,
+    width: "100%",
+    backgroundColor: colors.lightGary,
+    //justifyContent: "center",
+    alignItems: "center",
+  },
+  bgImageStyle: { flex: 1 },
+  backButtonContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10,
+    //paddingHorizontal: 20,
+  },
+  backButtonStyle: {
+    height: 40,
+    width: 40,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: colors.white,
+    borderRadius: 30,
+  },
+  headerTitleText: {
+    color: colors.white,
+    marginLeft: 10,
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  backIconStyle: { tintColor: colors.black },
+  tabContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  activeButtonStyle: {
+    borderBottomWidth: 2,
+    borderColor: colors.themeColor,
+    width: "50%",
+    paddingVertical: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+  },
+  deactiveButtonStyle: {
+    borderBottomWidth: 2,
+    borderColor: colors.lightGary,
+    width: "50%",
+    paddingVertical: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+  },
+  activeTextStyle: {
+    color: colors.themeColor,
+    fontSize: 16,
+  },
+  deactiveTextStyle: {
+    color: colors.darkGray,
+    fontSize: 16,
+  },
+  detailBoxContainer: {
+    width: "46%",
+    // backgroundColor: 'red',
+    marginHorizontal: "2%",
+    //marginVertical: '2%',
+  },
+  bgImageStyle: {
+    height: 60,
+  },
+  bottomSheetStyle: {
+    wrapper: {
+      backgroundColor: "transparent",
+    },
+
+    draggableIcon: {
+      backgroundColor: "#000",
+    },
+    container: {
+      height: moderateScale(height / 4.5),
+      backgroundColor: colors.whiteSmoke,
+      borderTopEndRadius: moderateScale(24),
+      borderTopLeftRadius: moderateScale(24),
+    },
+  },
+  selectItemText: {
+    textAlign: "center",
+    fontSize: textScale(16),
+    color: colors.themeColor,
+  },
+  itemContainer: {
+    marginVertical: moderateScaleVertical(24),
+    flexDirection: "row",
+  },
+  itemTextStyle: {
+    fontSize: textScale(16),
+    color: colors.themeColor,
+    marginLeft: moderateScale(20),
+  },
+  expiredBadgeContainer: {
+    height: 20,
+    width: 20,
+    backgroundColor: colors.darkRed,
+    borderRadius: 50,
+    marginHorizontal: 2,
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 8,
+  },
+  expiredBadgeCount: {
+    fontSize: 8,
+    color: colors.white,
+    fontWeight: "bold",
+  },
+  aboutToExpireContainer: {
+    height: 20,
+    width: 20,
+    backgroundColor: colors.orangeColor,
+    borderRadius: 50,
+    marginHorizontal: 2,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  aboutToExpireBadgeCount: {
+    fontSize: 8,
+    color: colors.white,
+    fontWeight: "bold",
+  },
+  inputStyle: {
+    borderColor: colors.steel,
+    borderWidth: 0.5,
+    flex: 1,
+    height: moderateScale(40),
+    borderRadius: moderateScale(5),
+    fontSize: textScale(10),
+    fontFamily: fontFamily.robotoRegular,
+    paddingHorizontal: moderateScale(10),
+    paddingVertical: moderateScaleVertical(10),
+    color: colors.black,
+  },
+  btnStyle: {
+    paddingVertical: moderateScaleVertical(10),
+    borderRadius: moderateScale(4),
+    justifyContent: "center",
+    alignItems: "center",
+    //marginBottom: moderateScaleVertical(50),
+    backgroundColor: colors.darkBlue,
+  },
+  btnTextStyle: {
+    color: colors.white,
+    fontSize: textScale(15),
+    fontFamily: fontFamily.robotoMedium,
+    textTransform: "uppercase",
+  },
+  vehicleNotMappedContainer: {
+    flex: 1,
+  },
+  vehicleNotAssignImageStyle: {
+    width: "100%",
+    height: "50%",
+  },
+  bottomSheetMainContainer: {
+    marginHorizontal: moderateScale(24),
+    borderTopLeftRadius: moderateScale(20),
+    borderTopEndRadius: moderateScale(20),
+  },
+  textInputBox: { height: 40 },
+  queryButtonContainer: { marginBottom: 5, marginTop: 20 },
+  openGalleryRowContainer: { flexDirection: "row" },
+  imageBackgroundContainer: { height: 150, width: "100%" },
+  topHeadingRowContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 20,
+  },
+  backArrowIcon: {
+    width: moderateScale(width / 16),
+    height: moderateScale(width / 16),
+  },
+  complianceNotFoundContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1,
+  },
+  notFoundText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: colors.black,
+  },
+  modalContainer: {
+    justifyContent: "flex-end",
+    alignItems: "center",
+    flex: 1,
+    backgroundColor: colors.modalColor,
+  },
+  modalInsideContainer: {
+    height: "32%",
+    width: "100%",
+    backgroundColor: colors.white,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    paddingVertical: 20,
+  },
+});
